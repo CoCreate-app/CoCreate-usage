@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/CoCreate-app/CoCreate-usage/compare/v1.0.0...v1.1.0) (2024-01-08)
+
+
+### Bug Fixes
+
+* applied host to define environment/branch ([8d7404c](https://github.com/CoCreate-app/CoCreate-usage/commit/8d7404ca75eeece4a17a9477d25101ccdab0a8ed))
+
+
+### Features
+
+* bumped CoCreate dependencies to their latest versions ([6e0b814](https://github.com/CoCreate-app/CoCreate-usage/commit/6e0b814e6afda547fceca6b7248ea5181de7843b))
+
 # 1.0.0 (2023-11-29)
 
 
