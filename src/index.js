@@ -26,7 +26,7 @@ class CoCreateUsage {
 
                 org = {}
                 org.debounce = setTimeout(() => {
-                    self.send(org, organization_id); // Call the callback to display the count
+                    self.send(org, organization_id, data.host); // Call the callback to display the count
                     self.organizations.delete(organization_id)
                 }, 60000);
 
@@ -54,7 +54,7 @@ class CoCreateUsage {
     }
 
 
-    async send(org, organization_id) {
+    async send(org, organization_id, host) {
         delete org.debounce
 
         org.dataTransferedOut += 250
@@ -63,6 +63,7 @@ class CoCreateUsage {
         const platformOrganization = this.crud.config.organization_id
         let organization = await this.crud.send({
             method: 'object.read',
+            host: this.crud.config.host,
             array: 'organizations',
             object: { _id: organization_id },
             organization_id: platformOrganization
@@ -103,6 +104,7 @@ class CoCreateUsage {
                 isResetDataTransfer = true
                 this.crud.send({
                     method: 'object.create',
+                    host: this.crud.config.host,
                     array: 'transactions',
                     object: {
                         organization_id,
@@ -130,6 +132,7 @@ class CoCreateUsage {
 
         let balanceUpdate = {
             method: 'object.update',
+            host: this.crud.config.host,
             array: 'organizations',
             object: { _id: organization_id },
             organization_id: platformOrganization,
@@ -154,6 +157,7 @@ class CoCreateUsage {
 
         let transaction = {
             method: 'object.create',
+            host,
             array: 'transactions',
             object: {
                 organization_id,
