@@ -1,3 +1,11 @@
+## [1.2.1](https://github.com/CoCreate-app/CoCreate-usage/compare/v1.2.0...v1.2.1) (2025-05-01)
+
+
+### Bug Fixes
+
+* update [@cocreate](https://github.com/cocreate) dependencies ([945ecb8](https://github.com/CoCreate-app/CoCreate-usage/commit/945ecb85f25dd67a7390f6c68c07721e21e401d5))
+* updated render selector to render-query ([33a8814](https://github.com/CoCreate-app/CoCreate-usage/commit/33a8814e3b724ef87541410df800825bf22fb178))
+
 # [1.2.0](https://github.com/CoCreate-app/CoCreate-usage/compare/v1.1.3...v1.2.0) (2024-11-04)
 
 
